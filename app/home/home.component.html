@@ -1,0 +1,18 @@
+<StackLayout class="page">
+    <ListView [items]="directions" class="list-group">
+        <ng-template let-item="item">
+          <DockLayout class="list-group-item">
+              <Label dock="left" [text]="item.name"></Label>
+              <DockLayout dock = "right">
+                 <Label text="-   " dock="left" (tap)="Update(item,-2)"> </Label> <!--TODO: Figure out a ... better way to space shit -->
+                 <Label text="   +" dock="right" (tap)="Update(item,+1)"> </Label>
+                 <Label [text]="item.score"></Label>
+              </DockLayout>
+              <Label></Label>
+         </DockLayout>
+        </ng-template> 
+    </ListView>
+    <!-- <DockLayout> -->
+       <!-- <Label [text] = "quote" dock="bottom"></Label> -->
+    <!-- </DockLayout> -->
+</StackLayout>

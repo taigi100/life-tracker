@@ -1,0 +1,9 @@
+<ActionBar title="ActionBar" class="action-bar"> <!-- TODO: decide if to remove/hide or not -->
+   <!-- <NavigationButton text="Go Back" android.systemIcon="ic_menu_back"
+   [nsRouterLink] = "['/addDir']"></NavigationButton> -->
+   <Label text="Life Tracker"  class="action-label"></Label>
+</ActionBar>
+<StackLayout class = "page">
+   <TextField class="input input-border" hint="Direction Name" #DirName></TextField>
+   <Button class="btn btn-primary btn-active" text="Add" (tap)="Add(DirName.text)"></Button>
+</StackLayout>
